@@ -1,0 +1,172 @@
+{
+  "gtlist": [
+    {
+      "gt": {
+        "gtid": "1",
+        "gtname": "鲁菜",
+        "gtstate": 1
+      },
+      "goodslist": [
+        {
+          "gid": "16ab609e-9bcf-4877-ab4e-f312716a0daa",
+          "gtid": "1",
+          "gname": "爆炒牛肉干",
+          "gprice": 60,
+          "gstate": 1,
+          "gimg": "hc2.png",
+          "gtime": 30,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+        {
+          "gid": "2055204c-ed46-4ba1-890a-fd69f10353d8",
+          "gtid": "1",
+          "gname": "清蒸鲈鱼",
+          "gprice": 50,
+          "gstate": 1,
+          "gimg": "ec3.png",
+          "gtime": 40,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+        {
+          "gid": "28d9150f-bf28-4580-a3f6-86d9bb7d691a",
+          "gtid": "1",
+          "gname": "糖醋鲤鱼",
+          "gprice": 36,
+          "gstate": 1,
+          "gimg": "lc1.png",
+          "gtime": 20,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+        {
+          "gid": "29b516a9-184c-4978-a89c-7bec2de3b3fb",
+          "gtid": "1",
+          "gname": "九转大肠",
+          "gprice": 40,
+          "gstate": 1,
+          "gimg": "lc2.png",
+          "gtime": 30,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+      ]
+    },
+    {
+      "gt": {
+        "gtid": "2",
+        "gtname": "川菜",
+        "gtstate": 1
+      },
+      "goodslist": [
+        {
+          "gid": "41b7eb5d-aa61-4559-8865-2ce7907f785f",
+          "gtid": "2",
+          "gname": "东坡肉",
+          "gprice": 35,
+          "gstate": 1,
+          "gimg": "cc3.png",
+          "gtime": 30,
+          "gcontent": "清蒸\r\n周六供应",
+          "gcount": 0
+        },
+        {
+          "gid": "72374eee-c5a5-4b54-b007-7ce5e7ffbb0e",
+          "gtid": "2",
+          "gname": "肝腰合炒",
+          "gprice": 30,
+          "gstate": 1,
+          "gimg": "cc1.png",
+          "gtime": 20,
+          "gcontent": "小炒\r\n周日供应",
+          "gcount": 0
+        },
+        {
+          "gid": "89e8ec77-8820-48c1-9d4e-f001f093ff93",
+          "gtid": "2",
+          "gname": "糖醋排骨",
+          "gprice": 30,
+          "gstate": 1,
+          "gimg": "cc2.png",
+          "gtime": 30,
+          "gcontent": "小炒\r\n周一至周六",
+          "gcount": 0
+        }
+      ]
+    },
+    {
+      "gt": {
+        "gtid": "3",
+        "gtname": "粤菜",
+        "gtstate": 1
+      },
+      "goodslist": [
+        {
+          "gid": "4b9363b7-a4f8-4329-8024-b53386cf4ddc",
+          "gtid": "3",
+          "gname": "白灼基围虾",
+          "gprice": 50,
+          "gstate": 1,
+          "gimg": "ec1.png",
+          "gtime": 30,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+        {
+          "gid": "b5abfe9e-4bfb-427f-ba86-594662b2216b",
+          "gtid": "3",
+          "gname": "白切鸡",
+          "gprice": 28,
+          "gstate": 1,
+          "gimg": "ec2.png",
+          "gtime": 30,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+        {
+          "gid": "d5646197-83c5-459e-85f9-f69e4207e52a",
+          "gtid": "3",
+          "gname": "糖醋里脊",
+          "gprice": 38,
+          "gstate": 1,
+          "gimg": "lc3.png",
+          "gtime": 20,
+          "gcontent": "小炒\r\n周一至周六供应",
+          "gcount": 0
+        }
+      ]
+    },
+    {
+      "gt": {
+        "gtid": "4",
+        "gtname": "徽菜",
+        "gtstate": 1
+      },
+      "goodslist": [
+        {
+          "gid": "58d9a28f-8746-492b-9f25-bcbe440ed636",
+          "gtid": "4",
+          "gname": "蛋黄豆腐",
+          "gprice": 20,
+          "gstate": 1,
+          "gimg": "hc1.png",
+          "gtime": 20,
+          "gcontent": "小炒",
+          "gcount": 0
+        },
+        {
+          "gid": "c0202b2c-fd97-47b3-83af-57f0db868939",
+          "gtid": "4",
+          "gname": "拔丝芋头",
+          "gprice": 19,
+          "gstate": 1,
+          "gimg": "hc3.png",
+          "gtime": 15,
+          "gcontent": "小炒",
+          "gcount": 0
+        }
+      ]
+    }
+  ]
+}

@@ -25,7 +25,7 @@ git clone https://github.com/nopapername/mhzqx-weChatApp.git  (本项目地址)
 
 ###### 前端小程序页面打开步骤：
 
-使用微信开发者工具导入 mhzqx前端文件夹中的工程
+使用微信开发者工具导入 mhzqx小程序文件夹中的工程
 
 编译运行
 

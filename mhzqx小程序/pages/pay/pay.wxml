@@ -1,0 +1,24 @@
+<!--client/pages/pay/pay.wxml-->
+<view class='page-head-box'>
+ <view class='myfont1'>支付剩余时间<view class='myfont1'></view></view>
+ <view class='myfont2'><text class='myfont1'>¥\t</text>{{sumprice}}</view>
+ <view class="mybtn" bindtap="goorder">订单详情>></view>
+</view>
+ <!-- 支付选项 -->
+ <view class='paytype-box'>
+        <view class="weui-cells weui-cells_after-title">
+            <radio-group bindchange="radioChange">
+                <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+                    <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+                    <image class='pay-img' src="../img/{{item.img}}"></image>
+                    <view class="weui-cell__bd">{{item.name}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+ </view>
+ <view class='page-bottom'>
+  <button class="weui-btn" bindtap="openToast" type="primary" disabled='{{isPay}}'>{{isPay ? '已支付':'确认支付'}}</button>
+ </view>

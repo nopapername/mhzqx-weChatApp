@@ -1,0 +1,61 @@
+<!--pages/severaddfood/severaddfood.wxml-->
+<view class="container">
+   <image class='head-img' src='../img/logo.png'></image>
+  <form bindsubmit="submit">
+    <view class="input-box">
+      <view class="weui-cells__title">菜品名称 :</view>
+      <input class="weui-input" name='foodname' placeholder="给菜品取一个名字吧" />
+    </view>
+
+    <view class="input-box">
+      <view class="weui-cells__title">选择菜品类别 :</view>
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+          <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+          </view>
+        </label>
+        <view class="weui-cell weui-cell_link">
+          <view class="weui-cell__bd myfont1" bindtap="addmore">添加更多菜品种类:</view>
+        </view>
+      </radio-group>
+    </view>
+    <view class="input-box">
+    <form bindsubmit="submitmore" wx:if="{{moreflag}}">
+      <view class="weui-cells__title">新类别名称 :</view>
+          <input class="weui-input" name='typename' placeholder="请输入新菜品名称：" />
+
+      <button class="weui-btn" type="primary" form-type='submit'>确定</button>
+    </form>
+    </view>
+
+    <view class="input-box">
+      <view class="weui-cells__title">菜品价格 :</view>
+      <input class="weui-input" name='foodprice' placeholder="卖多少钱呢" />
+    </view>
+    <view class="input-box">
+      <view class="weui-cells__title">供应时间 :</view>
+      <input class="weui-input" name='foodtime' placeholder="多久可以点呢" />
+    </view>
+    <view class="input-box">
+      <view class="weui-cells__title">添加描详细述 :</view>
+      <textarea class="weui-textarea" name='fooddiscribe' placeholder="原材料 供应商 菜品描述" style="min-height: 3.3em" />
+      <view class="weui-textarea-counter">0/200</view>
+    </view>
+
+    <view class="weui-uploader__input-box">
+      <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="" bindtap='chooseImage' />
+    </view>
+    <text class="up-text">上传图片</text>
+    <view class="up-img-box">
+    <image wx:if="{{files!=''}}" src="{{files}}" class="up-img"></image>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{warning}}</view>

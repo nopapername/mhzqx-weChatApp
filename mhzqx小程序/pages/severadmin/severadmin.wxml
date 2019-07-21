@@ -1,0 +1,19 @@
+<!--pages/severadmin/severadmin.wxml-->
+<view class="container">
+  <view class="list-box">
+    <view wx:for="{{adminlist}}" class="list-item" wx:key="{{item.id}}">
+      <view class="user-box">
+        <image class="item-img" src="{{item.avtar}}"></image>
+        <text class="item-text">{{item.name}}</text>
+      </view>
+      <image class="item-icon" src="../img/jian.png" bindtap="subtract" data-id='{{item.id}}'></image>
+    </view>
+    <form bindsubmit="submitadd" wx:if="{{addflag}}">
+      <view class="weui-cells__title">新管理员账号 :</view>
+      <input class="weui-input" name='id' placeholder="请输入微信账号：" />
+      <button class="weui-btn" type="primary" form-type='submit'>确定</button>
+    </form>
+  </view>
+
+  <image class="add-icon" src="../img/addicon.png" bindtap="add"></image>
+</view>

@@ -1,0 +1,111 @@
+<!--client/pages/menu/menu.wxml-->
+<view class="page">
+  <view class='container'>
+    <view class="page__bd">
+
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{mydata}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <!-- 导航栏标题 -->
+              <view class="weui-navbar__title">{{item.gt.gtname}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+         <view class='page-head-box'>
+          <image class='head-img' src='../img/logo.png'></image>
+          <view class='wel-title'>满汉子,满30元送扎啤~</view>
+        </view>
+          <!-- 导航栏对应内容 -->
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <view class='list-box' wx:for="{{mydata[0].goodslist}}" wx:key="{{item.gid}}">
+              <view class='list-item-box'>
+                <image class='item-img' src='{{serveraddr}}/images/{{item.gimg}}' data-gtid="{{item.gtid}}"data-gid="{{item.gid}}" bindtap='goinfo'></image>
+                <view class='item-info-box'>
+                  <view class='item-name'>{{item.gname}}</view>
+                  <text class='item-type'>{{item.gcontent}}</text>
+                  <view class='item-price'>{{item.gprice}}
+                    <text class='item-type'>/1份</text>
+                  </view>
+                  <view class='item-type'>原价：
+                    <text class='gtime-text' style=' text-decoration: line-through;font-style: oblique;'>{{item.gprice}}</text>
+                  </view>
+                </view>
+                <view class='item-choise-box'>
+                  <view class='item-icon-box '>
+                    <image class='choise-icon-subtract' data-gtid="{{item.gtid}}" data-gprice="{{item.gprice}}" data-gid="{{item.gid}}" data-gtime="{{item.gtime}}" bindtap='subtract' src="../img/subtract.png"></image>
+                    <view class='chosie-num'>{{item.gcount}}</view>
+                    <image class='choise-icon-add' data-gtid="{{item.gtid}}" data-gprice="{{item.gprice}}" data-gid="{{item.gid}}" data-gtime="{{item.gtime}}" bindtap='add' src="../img/add.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+
+            <view class='list-box' wx:for="{{mydata[1].goodslist}}" wx:key="{{item.gid}}">
+              <view class='list-item-box'>
+                 <image class='item-img' src="{{serveraddr}}/images/{{item.gimg}}" data-gtid="{{item.gtid}}"data-gid="{{item.gid}}" bindtap='goinfo'></image>
+                <view class='item-info-box'>
+                  <view class='item-name'>{{item.gname}}</view>
+                  <text class='item-type'>{{item.gcontent}}</text>
+                  <view class='item-price'>{{item.gprice}}
+                    <text class='item-type'>/1份</text>
+                  </view>
+                  <view class='item-type'>原价：
+                    <text class='gtime-text' style=' text-decoration: line-through;font-style: oblique;'>{{item.gprice}}</text>
+                  </view>
+                </view>
+                <view class='item-choise-box'>
+                  <view class='item-icon-box '>
+                    <image class='choise-icon-subtract' data-gtid="{{item.gtid}}" data-gprice="{{item.gprice}}" data-gid="{{item.gid}}" data-gtime="{{item.gtime}}" bindtap='subtract' src="../img/subtract.png"></image>
+                    <view class='chosie-num'>{{item.gcount}}</view>
+                    <image class='choise-icon-add' data-gtid="{{item.gtid}}" data-gprice="{{item.gprice}}" data-gid="{{item.gid}}" data-gtime="{{item.gtime}}" bindtap='add' src="../img/add.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+            <view class='list-box' wx:for="{{mydata[2].goodslist}}" wx:key="{{item.gid}}">
+              <view class='list-item-box'>
+                 <image class='item-img' src="{{serveraddr}}/images/{{item.gimg}}" data-gtid="{{item.gtid}}"data-gid="{{item.gid}}" bindtap='goinfo'></image>
+                <view class='item-info-box'>
+                  <view class='item-name'>{{item.gname}}</view>
+                  <text class='item-type'>{{item.gcontent}}</text>
+                  <view class='item-price'>{{item.gprice}}
+                    <text class='item-type'>/1份</text>
+                  </view>
+                  <view class='item-type'>原价：
+                    <text class='gtime-text' style=' text-decoration: line-through;font-style: oblique;'>{{item.gprice}}</text>
+                  </view>
+                </view>
+                <view class='item-choise-box'>
+                  <view class='item-icon-box '>
+                    <image class='choise-icon-subtract' data-gtid="{{item.gtid}}" data-gprice="{{item.gprice}}" data-gid="{{item.gid}}" data-gtime="{{item.gtime}}" bindtap='subtract' src="../img/subtract.png"></image>
+                    <view class='chosie-num'>{{item.gcount}}</view>
+                    <image class='choise-icon-add' data-gtid="{{item.gtid}}" data-gprice="{{item.gprice}}" data-gid="{{item.gid}}" data-gtime="{{item.gtime}}" bindtap='add' src="../img/add.png"></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='page-bottom'>
+      <view class='bottom-img-box'>
+        <image class='bottom-img' src='../img/send.png'></image>
+        <view class='bottom-badge'>{{foodNum}}</view>
+      </view>
+      <view class='container-bottom-box'>
+        <view class='container-bottom-l'>总计:{{sumprice}} 原价:
+          <text class='bottom-text gtime-text' style=' text-decoration: line-through;font-style: oblique; font-size: 25rpx;'>{{psumprice}}</text> </view>
+        <view wx:if="{{foodNum==0}}" class='container-bottom-r'>未点单</view>
+        <view wx:else class='container-bottom-r' bindtap='pay'>点好了</view>
+      </view>
+    </view>
+  </view>
+</view>

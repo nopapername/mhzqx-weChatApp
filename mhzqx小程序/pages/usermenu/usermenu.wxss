@@ -1,0 +1,133 @@
+/* client/pages/pay/pay.wxss */
+
+page {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.contioner {
+  margin: 0 50rpx;
+}
+
+.page-head-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+.head-img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.wel-title {
+  font-weight: 700;
+  font-size: 30rpx;
+}
+
+.page-info-down {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 30rpx 0;
+  padding: 10rpx;
+}
+
+/* item */
+.menu-box
+{
+    margin-bottom:100rpx; 
+}
+.list-box {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  border-bottom: 1px solid rgba(177, 175, 175, 0.3);
+}
+
+.list-item-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 30rpx;
+}
+
+.item-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+}
+
+.item-name {
+  font-weight: 700;
+}
+
+.item-type {
+  opacity: 0.5;
+  font-size: 25rpx;
+  color: black;
+  font-style: normal;
+}
+
+.item-price {
+  font-style: oblique;
+  color: rgb(199, 25, 25);
+}
+
+.gtime-tex {
+  opacity: 0.8;
+}
+
+/* 底部 */
+
+.page-bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  position: fixed;
+  bottom: 20rpx;
+  width: 90%;
+  background-color: white;
+}
+
+.container-bottom-box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  box-shadow: 5rpx 5rpx rgb(141, 140, 140);
+  border-radius: 50rpx;
+  overflow: hidden;
+  z-index: 2;
+}
+.container-bottom-l {
+  width: 60%;
+  padding: 20rpx 0;
+}
+.container-bottom-r {
+  width: 40%;
+  padding: 20rpx;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* 字体 */
+
+.myfont1 {
+  /* font-size: smaller; */
+  opacity: 0.7;
+}
+
+.myfont2 {
+  font-style: oblique;
+  color: rgb(199, 25, 25);
+}

@@ -1,0 +1,52 @@
+/* pages/severadmin/severadmin.wxss */
+.container{
+  padding:0 50rpx;
+  margin: 50rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.list-box
+{
+  width: 100%;
+}
+.list-item
+{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 40rpx;
+}
+.user-box
+{
+  display: flex;
+  align-items: center;
+}
+.item-img
+{
+  width: 100rpx;
+  height: 100rpx;
+}
+.item-text
+{
+ color: rgba(0, 0, 0, .8);
+ margin-left: 40rpx;
+}
+.item-icon
+{
+  width: 40rpx;
+  height: 40rpx;
+}
+.add-icon{
+  position: fixed;
+  bottom: 40rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.weui-input
+{
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding-left: 20rpx;
+}

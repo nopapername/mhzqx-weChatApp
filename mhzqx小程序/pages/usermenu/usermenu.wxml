@@ -1,0 +1,33 @@
+<!--client/pages/pay/pay.wxml-->
+<view class='page-head-box'>
+  <image class='head-img' src='../img/logo.png'></image>
+  <view class='wel-title'>满汉子,满30元送扎啤~</view>
+</view>
+<view class='contioner'>
+<view class='page-info-down'>客官，这是您的菜单</view>
+</view>
+<view style='background-color:#f6f6f6;width:100;height:20rpx;'></view>
+<view class='contioner'>
+  <!-- <view class='myfont1'>客官，这是您的菜单</view> -->
+  <view class='menu-box'>
+    <view class='list-box' wx:for="{{myfoodsList}}" wx:key="{{item.gid}}">
+      <view class='list-item-box'>
+         <image class='item-img' src="{{serveraddr}}/images/{{item.gimg}}" data-gid="{{item.gid}}" bindtap='goinfo'></image>
+        <view class='item-info-box'>
+          <view class='item-name'>{{item.gname}}\n\n</view>
+          <text class='item-type'>\n*{{item.gcount}}</text>
+        </view>
+        <view class='item-price'>{{item.gprice*item.gcount}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='page-bottom'>
+  <view class='container-bottom-box'>
+    <view class='container-bottom-l'>总计：
+      <text class='myfont2'>{{sumprice}}</text>
+    </view>
+    <view class='container-bottom-r' bindtap='gopay'>去结账</view>
+  </view>
+</view>

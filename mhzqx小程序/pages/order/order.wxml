@@ -1,0 +1,71 @@
+<!--pages/order/order.wxml-->
+<view class="contioner">
+  <view class="img-box">
+    <image class='head-img' src='../img/logo.png'></image>
+  </view>
+  <view class='orderiIng'>
+    <text style='margin: 10px 5px;color: #040404;'>进行中订单：</text>
+    <block wx:for="{{foodlist}}" :key="index">
+      <view class="page-head-box ">
+      <view class='myfont1 '>当前此订单排到了
+        <text class='myfont2'>{{item.orderSort}} </text>位</view>
+      <view class='page-info-down myfont1'>预计需要
+        <text class='myfont2'>{{item.orderTime}} </text>分钟</view>
+      </view>
+      <view class="order-list-box">
+        <view class="order-head-box">
+          <view class="myfont3">付款金额</view>
+          <view class="myfont2">¥{{item.orderPrice}}</view>
+        </view>
+        <view class="order-body-box">
+          <view class="body-item-box">
+            <view class="myfont4 body-l">商 品</view>
+            <view class="myfont4 body-r item-food-box">
+              <block  wx:for="{{item.foods}}" wx:key="{{item.gid}}">
+                <view class="myfont4 ">{{item}} </view>
+              </block>
+              </view>
+            </view>
+            <view class="body-item-box ">
+              <view class="myfont4 body-l ">收获地址</view>
+              <view class="myfont4 body-r ">四川师范大学成龙校区东苑三栋</view>
+            </view>
+            <view class="body-item-box ">
+              <view class="myfont4 body-l ">收款方</view>
+              <view class="myfont4 body-r ">满汉子全席餐厅</view>
+            </view>
+          </view>
+          <view class="order-bottom-box ">
+            <view class="myfont5 bottom-text " bindtap="agin">再来一单</view>
+          </view>
+        </view>
+    </block>
+  </view>
+  <view class='overorder'>
+    <text style='margin: 10px 5px;color: #040404;'>已完成订单：</text>
+    <block wx:for="{{overlist}}" :key="index">
+      <view class="order-list-box">
+        <view class="order-head-box">
+          <view class="myfont3">付款金额</view>
+          <view class="myfont2">¥{{item.ORDERTOTLEPRICE}}</view>
+        </view>
+        <view class="order-body-box">
+          <view class="body-item-box">
+            <view class="myfont4 body-l">商品订单编号</view>
+            <view class="myfont4 body-r item-food-box">
+              {{item.ORDERID}}
+              </view>
+            </view>
+            <view class="body-item-box ">
+              <view class="myfont4 body-l ">收获地址</view>
+              <view class="myfont4 body-r ">四川师范大学成龙校区东苑三栋</view>
+            </view>
+            <view class="body-item-box ">
+              <view class="myfont4 body-l ">收款方</view>
+              <view class="myfont4 body-r ">满汉子全席餐厅</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>

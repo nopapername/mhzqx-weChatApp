@@ -1,0 +1,50 @@
+/* client/pages/pay/pay.wxss */
+
+page {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+.page-head-box
+{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 100rpx;
+}
+.mybtn
+{
+  background-color: white!important;
+  border: none!important;
+}
+.pay-img
+{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+.page-bottom
+{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+ justify-content: center;
+  bottom: 20rpx;
+  width: 100%;
+}
+.weui-btn
+{
+  width: 90%;
+}
+/* 字体 */
+.myfont1
+{
+  opacity: .6;
+  font-size: small;
+}
+.myfont2
+{
+  font-weight: 700;
+  font-size: 80rpx;
+}

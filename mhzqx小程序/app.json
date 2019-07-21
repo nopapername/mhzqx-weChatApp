@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/menu/menu",
+    "pages/order/order",
+    "pages/usermenu/usermenu",
+    "pages/severaddfood/severaddfood",
+    "pages/severadmin/severadmin",
+    "pages/severmenu/severmenu",
+    "pages/severalertfood/severalertfood",
+    "pages/info/info",
+    "pages/severinfo/severinfo",
+    "pages/pay/pay",
+    "pages/appraise/appraise"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "满汉子全席",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

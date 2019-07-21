@@ -1,0 +1,59 @@
+/* pages/severalertfood/severalertfood.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50rpx 0;
+}
+.head-img {
+  height: 300rpx;
+  width: 300rpx;
+}
+form{
+  width: 80%;
+}
+.input-box {
+  margin: 40rpx 0;
+}
+
+.weui-input,.weui-textarea,radio-group {
+  border: 2rpx solid rgba(0, 0, 0, 0.2);
+  border-radius: 10rpx;
+  font-size: 0.7rem;
+  padding-left: 20rpx;
+}
+
+.weui-textarea{
+  padding-top: 20rpx;
+}
+.weui-cell__bd
+{
+  color: rgba(0, 0, 0, 0.6);
+}
+.weui-textarea-counter
+{
+  font-size: 0.7rem;
+}
+.weui-uploader__input-box
+{
+  width: 100%;
+}
+.up-img-box
+{
+  display: flex;
+  justify-content: center;
+}
+.up-img
+{
+  height: 200rpx;
+  width: 200rpx;
+}
+.up-text
+{
+  font-size:.7rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.myfont1
+{
+  color: rgb(4, 146, 240);
+}

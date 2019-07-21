@@ -1,0 +1,31 @@
+<!--client/pages/login.wxml-->
+<!--启动界面-->
+<view class='container'>
+  <!-- 加载开始 -->
+  <view class='loading-box' wx:if="{{}}">
+    <image class='loading-img' src='../img/loading.gif'></image>
+  </view>
+  <!-- 加载结束 -->
+  <block wx:else>
+    <image class='show-img' src='../img/show.png'></image>
+    <!-- 头像及动画 -->
+    <view class='content'>
+      <!-- 有网 已验证 -->
+      <view wx:if="{{(hasUserInfo || !canIUse)}}">
+        <image class='avatar' src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+      <view wx:else>
+        <image class='avatar' src='../img/unloading.png'></image>
+      </view>
+
+      <!-- 设置波浪线 -->
+      <image class='wave-img' src='../img/wave1.gif'></image>
+      <button class='click-btn' type='primary' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>
+      立即点餐
+      </button>
+      <view wx:if="true" class="admim-text" bindtap="openadmin" wx:if="{{isAdmin}}">管理员模式</view>
+
+      <text class='copyright'>@满汉子全席餐厅</text>
+    </view>
+  </block>
+</view>

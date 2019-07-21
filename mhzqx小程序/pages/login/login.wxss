@@ -1,0 +1,156 @@
+/* client/pages/login.wxss */
+
+page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-img {
+  /* height: 100%; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  transform: translate3d(0, 100%, 0);
+  animation: rise 3s cubic-bezier(0.19, 1, 0.22, 1) 0.25s forwards;
+  /* padding: 100rpx 0; */
+  opacity: 0;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0rpx, 0);
+  }
+}
+.show-img {
+  width: 400rpx;
+  height: 400rpx;
+}
+.avatar {
+  width: 125rpx;
+  height: 125rpx;
+  border-radius: 50%;
+  border: 1rpx solid #fff;
+  box-shadow: 3rpx 3rpx 10rpx rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 50rpx;
+  z-index: 2;
+  animation: sway 10s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0% {
+    transform: translate3d(0, 20rpx, 0) rotate(-15deg);
+  }
+
+  17% {
+    transform: translate3d(0, 0rpx, 0) rotate(25deg);
+  }
+
+  34% {
+    transform: translate3d(0, -20rpx, 0) rotate(-20deg);
+  }
+
+  50% {
+    transform: translate3d(0, -10rpx, 0) rotate(15deg);
+  }
+
+  67% {
+    transform: translate3d(0, 10rpx, 0) rotate(-25deg);
+  }
+
+  84% {
+    transform: translate3d(0, 15rpx, 0) rotate(15deg);
+  }
+
+  100% {
+    transform: translate3d(0, 20rpx, 0) rotate(-15deg);
+  }
+}
+
+.wave-img {
+  height: 400rpx;
+  width: 500rpx;
+  margin-top: -100rpx;
+  border-radius: 20%;
+  box-shadow: 5rpx 5rpx slategrey;
+  margin-bottom:100rpx;
+
+}
+
+
+/* .offline-img{
+  opacity: 0.8;
+  width: 30rpx;
+  height: 30rpx;
+}
+.offline-text
+{
+font-size: 35rpx;
+color:#FFBE79 ;
+} */
+.click-btn{
+  font-size:35rpx;
+  text-align: center;
+  opacity: 0.8;
+  width: 400rpx;
+  height: 80rpx;
+}
+
+.click-btn:active {
+  opacity: 0.5;
+}
+
+.copyright {
+  margin-top: 60rpx;
+  font-size: 25rpx;
+  opacity: 0.8;
+}
+.weui-btn-area
+{
+  margin:0;
+  z-index: 2;
+}
+.admim-text
+{
+  font-size: 25rpx;
+  color: red;
+  margin-top: 10rpx;
+}

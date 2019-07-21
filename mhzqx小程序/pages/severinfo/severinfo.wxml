@@ -1,0 +1,46 @@
+<!--client/pages/info/info.wxml-->
+<view class='container'>
+  <view class='page-head'>
+    <image class='food-img' src="{{serveraddr}}/images/{{foodinfo.GIMG}}"></image>
+    <view class='h-name'>{{foodinfo.GNAME}}</view>
+    <view class='myfont2'>{{foodinfo.GPRICE}}
+      <text class="myfont1">¥/份儿</text>
+    </view>
+  </view>
+  <view class='page-content-box'>
+    <view class="weui-article">
+      <view class="weui-article__h1">详细信息：</view>
+      <view class="weui-article__section">
+        <view class="weui-article__h3">菜品描述</view>
+        <view class="weui-article__p">{{foodinfo.GINFO}}</view>
+      </view>
+    </view>
+    <view class='appraise-box'>
+      <navigator url="../appraise/appraise" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">用户评价</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access myfont1">233条评论</view>
+      </navigator>
+      <view class="appraise-content">
+        <view class='appraise-item-box'>
+          <text class='myfont1'>本月热度</text>
+          <view class='weui-progress__bar-box'>
+            <view class="weui-progress__bar ">
+              <progress percent="90" stroke-width="4" />
+            </view>
+          </view>
+          <text class='myfont2'>90<text class="myfont1">份</text></text>
+        </view>
+        <view class='appraise-item-box'>
+          <text class='myfont1'>好评率</text>
+          <view class='weui-progress__bar-box'>
+            <view class="weui-progress__bar ">
+              <progress percent="70" stroke-width="4" />
+            </view>
+          </view>
+          <text class='myfont2'>70%</text>
+        </view>
+      </view>
+    </view>
+    <button class="weui-btn cut-btn" type="warn" bindtap="cut">下架</button>
+  </view>
+</view>

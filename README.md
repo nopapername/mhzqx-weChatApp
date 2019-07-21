@@ -3,7 +3,7 @@
 
 ### 小程序预览 
 
-由于没有正式上线使用，仅作为demo使用，所以请移步csdn预览动图：http://www.oyjhblog.com/#/
+由于没有正式上线使用，仅作为demo使用，所以请移步csdn预览动图：https://blog.csdn.net/weixin_43388844/article/details/96728376
 
 ### 满汉子全席——点餐小程序
 

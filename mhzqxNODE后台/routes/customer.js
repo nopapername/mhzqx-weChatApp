@@ -20,15 +20,17 @@ var responseJSON = function (res, ret) {
   }
 }
 
-/* 获取openid
-		 * appid=wxc449411fab1b45b8(微信小程序的id)
-		 * secret=645cc9ba8cf29fc5fa683047e3ed859（每个人的密钥，需要到微信小程序平台中去获取）
+/* 获取openid //请修改下面的
+		 * appid=wxc449411fab1b45b8(我的微信小程序的id，已设置成自动获取不需要改)
+		 * secret=645cc9ba8cf29fc5fa683047e3ed859（每个人的密钥，需要到微信小程序平台中去获取，然后在下方标注处改一下）
 		 * js_code:小程序传递过来的code属性
 		 */
 router.get('/getopenid', function(req, res, next) {
   var param = req.query || req.params
   var code = param.code
-  var wx_url = 'https://api.weixin.qq.com/sns/jscode2session?appid=wxc7f540d89f35da73&secret=c9156a7da5d4f22abecbcc6b54a290ae&js_code='
+  var appid = param.appid
+  var secret = 'ac315c60023c6e7eab97d49b55f831b8' //请自主修改自己的小程序secret ,使用的是测试号去https://developers.weixin.qq.com/miniprogram/dev/devtools/sandbox.html登陆查询
+  var wx_url = 'https://api.weixin.qq.com/sns/jscode2session?appid='+ appid +'&secret=' + secret + '&js_code='
   + code + '&grant_type=authorization_code'
   request(wx_url, function (error, response, body) {
     var data = {}

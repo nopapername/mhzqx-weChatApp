@@ -11,7 +11,6 @@ Page({
   onGotUserInfo: function (e) {
     if (e.detail.userInfo) {
       app.globalData.userInfo = e.detail.userInfo
-      app.getOpenId()
       wx.navigateTo({
         url: '../login/login'
       })

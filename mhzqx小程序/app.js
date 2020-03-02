@@ -6,6 +6,9 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    var accountInfo = wx.getAccountInfoSync();
+    console.log(accountInfo)
+    this.globalData.appid = accountInfo.miniProgram.appId
     wx.getSetting({
       success (res){
         if (res.authSetting['scope.userInfo']) {
@@ -16,7 +19,7 @@ App({
             }
           })
         } else { 
-          // 未授权，跳转授权
+          // 未授权，跳转授权openid
           wx.navigateTo({
             url: '../index/index'
           })
@@ -32,14 +35,14 @@ App({
           wx.request({
             url: that.globalData.serveraddr + '/customer/getopenid',
             data: {
-              code: res.code
+              code: res.code,
+              appid: that.globalData.appid
             },
             success: res => {
               if (res.statusCode == 200) {
                 that.globalData.openid = res.data.openid
               }else {
                 console.log('获取用户登录态失败！' + res.errMsg)
-                reject('error')
               }
               if (that.globalData.openid) {
                 wx.request({
@@ -62,14 +65,14 @@ App({
                         that.globalData.isAdmin = true
                       }
                       resolve(that.globalData)
+                    }else {
+                      //失败
+                      wx.showModal({
+                        title: '提示',
+                        content: '用戶获取失败'
+                      })
+                      reject('error')
                     }
-                    // } else {
-                    //   //失败
-                    //   wx.showModal({
-                    //     title: '提示',
-                    //     content: '用戶获取失败'
-                    //   })
-                    // }
                   }
                 })
               }
@@ -104,5 +107,6 @@ App({
     cusid: null,
     isHaveOrder: false,
     limit: false,
+    appid: null
   }
 })

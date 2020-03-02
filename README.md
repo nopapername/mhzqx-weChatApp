@@ -37,6 +37,8 @@ cd mhzqxNODE后台 （进入mhzqxNODE后台 文件夹目录下）
 
 修改db文件夹目录下的dbConfig.js文件 为你自己的数据库配置
 
+重点：修改routes文件夹下customer.js里面的appid和secret为自己小程序号的小程序id和密钥
+
 npm install （建议使用淘宝镜像cnpm）
 
 npm start

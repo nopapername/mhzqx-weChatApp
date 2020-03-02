@@ -20,7 +20,7 @@
 
       <!-- 设置波浪线 -->
       <image class='wave-img' src='../img/wave1.gif'></image>
-      <button class='click-btn' type='primary' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>
+      <button class='click-btn' type='primary' bindtap='joinPage'>
       立即点餐
       </button>
       <view wx:if="true" class="admim-text" bindtap="openadmin" wx:if="{{isAdmin}}">管理员模式</view>

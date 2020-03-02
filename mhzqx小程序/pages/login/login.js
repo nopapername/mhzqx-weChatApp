@@ -15,34 +15,37 @@ Page({
         isAdmin: value
       })
     })
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
+    var that = this
+    app.getOpenId().then(function (res) {
+      if (app.globalData.userInfo) {
+        that.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
+      } else if (this.data.canIUse) {
+        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        // 所以此处加入 callback 以防止这种情况
+        app.userInfoReadyCallback = res => {
+          that.setData({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
         }
-      })
-    }
+      } else {
+        // 在没有 open-type=getUserInfo 版本的兼容处理
+        wx.getUserInfo({
+          success: res => {
+            app.globalData.userInfo = res.userInfo
+            that.setData({
+              userInfo: res.userInfo,
+              hasUserInfo: true
+            })
+          }
+        })
+      }
+    })
   },
-  getUserInfo: function (e) {
+  joinPage: function (e) {
     if (app.globalData.isLogin) {
       //成功，后续逻辑：判断用户是否有正在处理的订单，如果有，那么跳转到订单页面；如果没有跳转到菜单页面。
       if (app.globalData.isHaveOrder) {
@@ -54,15 +57,16 @@ Page({
           url: '../menu/menu'
         })
       }
-    } else {
-      //失败
-      wx.showToast({
-        title: '请稍后，正在获取登录信息！',
-        icon: "none",
-        duration: 1000,
-        mask: true
-      })
     }
+    // } else {
+    //   //失败
+    //   wx.showToast({
+    //     title: '登录信息获取失败！',
+    //     icon: "none",
+    //     duration: 1000,
+    //     mask: true
+    //   })
+    // }
   },
   openadmin: function () {
     wx.navigateTo({

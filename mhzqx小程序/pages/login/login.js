@@ -46,7 +46,6 @@ Page({
     })
   },
   joinPage: function (e) {
-    console.log(app.globalData)
     if (app.globalData.isLogin) {
       //成功，后续逻辑：判断用户是否有正在处理的订单，如果有，那么跳转到订单页面；如果没有跳转到菜单页面。
       if (app.globalData.isHaveOrder) {

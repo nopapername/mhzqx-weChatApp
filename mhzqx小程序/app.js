@@ -7,7 +7,6 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     var accountInfo = wx.getAccountInfoSync();
-    console.log(accountInfo)
     this.globalData.appid = accountInfo.miniProgram.appId
     wx.getSetting({
       success (res){
@@ -18,10 +17,8 @@ App({
               that.globalData.userInfo = res.userInfo
             }
           })
-        } else { 
-          // 未授权，跳转授权openid
           wx.navigateTo({
-            url: '../index/index'
+            url: '../login/login'
           })
         }
       }

@@ -54,11 +54,13 @@ router.get('/getopenid', function(req, res, next) {
 router.post('/login', function (req, res) {
   pool.getConnection(function (err, connection) {
     var param = req.body
+    console.log(param)
     var nickname = param.nickname
     var openid = param.openid
     var _res = res
     var syscusid = ''
     var myCusid = ''
+    var limit = false
     connection.query(customerSql.queryAll, function (err, res) {
       var data = {}
       var isAdmin = false

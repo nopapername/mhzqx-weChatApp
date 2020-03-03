@@ -13,7 +13,7 @@
 
 前端 微信开发者工具 微信小程序开发
 前端使用 html + css + js + 小程序api + weui
-后台使用 nodejs + express框架
+后台使用 nodejs + express框架 + mysql数据库
 
 ### 起手式
 

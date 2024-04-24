@@ -51,4 +51,3 @@ npm start
 
 >
 
-[咸鱼](https://m.tb.cn/h.UBCy9xS?tk=S4SGdqtnZVE)接前端bug调试，项目讲解，小需求，小作业等，react/vue/angular均可包括其他前端技术，咸鱼号：1019825864oyjh
